@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo opensrf...
+sudo systemctl stop opensrf && sleep 2
+#sudo systemctl start opensrf && sleep 2
+echo opensrf...done
+
+echo websocketd-osrf...
+sudo systemctl stop websocketd-osrf && sleep 1
+#sudo systemctl start websocketd-osrf
+echo websocketd-osrf...done
+
+echo apache2...
+sudo systemctl stop apache2
+#sudo systemctl start apache2
+echo apache2...done
