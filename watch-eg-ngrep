@@ -1,2 +1,2 @@
 #!/bin/bash -
-sudo ngrep -d any -W byline '' 'port 7080' | egrep --line-buffered 'POST|GET|method=|Expires:'
+sudo ngrep -d any -W byline '' 'port 7080' | egrep --line-buffered 'POST|GET|method='
