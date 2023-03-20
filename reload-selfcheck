@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+cd /home/opensrf/Evergreen/Open-ILS/src/perlmods/
+sudo ./Build install
+for i in open-ils.circ open-ils.selfcheck; do
+    sudo -u opensrf /openils/bin/osrf_control -l --restart --service $i
+done
+sudo systemctl restart apache2
+
+#tail -n0 -f /var/log/evergreen/$(date +%Y/%m/%d)/*.log
+tail -n0 -f /var/log/evergreen/$(date +%Y/%m/%d)/osrf*.log
