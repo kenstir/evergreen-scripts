@@ -1,4 +1,5 @@
 #!/bin/bash -
 
 cd ~/evergreen-ansible-installer
-sudo ansible-playbook -e @local_settings.yml local_stop_services.yml playbook.yml
+#sudo ansible-playbook -e @local_settings.yml local_stop_services.yml playbook.yml
+sudo ansible-playbook -e @local_settings.yml playbook.yml

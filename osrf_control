@@ -1,2 +1,0 @@
-#!/bin/bash -
-sudo -u opensrf /openils/bin/osrf_control "$@"
