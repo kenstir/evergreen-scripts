@@ -1,8 +1,7 @@
 #!/bin/bash
 
 echo opensrf...
-sudo systemctl stop opensrf && sleep 2
-#sudo systemctl start opensrf && sleep 2
+sudo -u opensrf env PATH=${PATH}:/openils/bin /openils/bin/osrf_control -l --stop-all && sleep 2
 echo opensrf...done
 
 echo websocketd-osrf...
